@@ -1,0 +1,132 @@
+.article{
+  p {
+    line-height: 1.5;
+    padding-bottom: 1.5rem;
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+  h2{
+    color: $color-mako;
+    font-family: $third-font-family;
+    font-weight: 400;
+    font-size:rem(22);
+    padding-bottom: rem(22);
+    line-height: 1.2;
+    transition: font-size 0.3s ease;
+
+    @media (min-width: 415px) {
+      font-size: rem(30);
+    }
+
+  }
+  h3{
+    color: $color-mako;
+    font-family: $third-font-family;
+    font-weight: 400;
+    font-size:rem(22);
+    padding-bottom: rem(28);
+    line-height: 1.2;
+    transition: font-size 0.3s ease;
+
+    @media (min-width: 415px) {
+      font-size: rem(28);
+    }
+  }
+  h4{
+    color: $color-mako;
+    font-family: $third-font-family;
+    font-weight: 400;
+    font-size:rem(22);
+    padding-bottom: rem(26);
+    line-height: 1.2;
+    transition: font-size 0.3s ease;
+
+    @media (min-width: 415px) {
+      font-size: rem(26);
+    }
+  }
+  h5{
+    color: $color-mako;
+    font-family: $third-font-family;
+    font-weight: 400;
+    font-size:rem(22);
+    padding-bottom: rem(24);
+    line-height: 1.2;
+    transition: font-size 0.3s ease;
+
+    @media (min-width: 415px) {
+      font-size: rem(24);
+    }
+  }
+  h6{
+    color: $color-mako;
+    font-family: $third-font-family;
+    font-weight: 400;
+    font-size:rem(22);
+    padding-bottom: rem(23);
+    line-height: 1.2;
+    transition: font-size 0.3s ease;
+
+    @media (min-width: 415px) {
+      font-size: rem(23);
+    }
+  }
+  img{
+    &.alignnone {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    &.alignleft{
+      float:left;
+      margin:0 20px 10px 0;
+      max-width: 100%;
+      height: auto;
+    }
+    &.alignright{
+      float:right;
+      margin:0 0 10px 20px;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  ul,
+  ol{
+    padding: 20px 1.5rem 20px 40px;
+  }
+  ul li,
+  ol li{
+    transform:translateX(1.5rem);
+    margin-bottom: 10px;
+    line-height: 1.5rem;
+    font-size: 16px
+  }
+  ul li{
+    position: relative;
+    display: block;
+    &:before {
+      content: '';
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+      background: #000000;
+      position: absolute;
+      left: -20px;
+      top: 9px;
+    }
+  }
+
+  blockquote {
+    margin-bottom: 1.5rem;
+    //background: #000000;
+    padding: 40px;
+    color: #fff;
+    font-weight: 500;
+  }
+  p + ul,
+  p + ol {
+    padding-top: 0;
+  }
+}

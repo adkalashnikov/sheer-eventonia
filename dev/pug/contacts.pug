@@ -1,0 +1,15 @@
+extends template/main
+
+block variables
+    - var title = 'Контакты'
+    - var pageClass = 'contacts-page'
+
+block body
+    include modules/header/header
+    - var pageTitle = 'h1';
+        .container
+            +section-title('Наши контакты')
+    include modules/map-section/map-section
+    include modules/banner-1/banner-1
+    include modules/text-section/text-section
+    include modules/footer/footer

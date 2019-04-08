@@ -1,0 +1,15 @@
+section.posts-grid-3
+    .container
+        +section-title('Услуги, без которых сложно обойтись')
+        .posts-grid-3__posts
+            - var n = 0;
+            while n < 6
+                article.posts-grid-3__post
+                    .posts-grid-3__post-thumb
+                        img(src="static/images/content/post-3.jpg" alt="post image")
+                    .posts-grid-3__post-info
+                        .posts-grid-3__post-inner
+                            .posts-grid-3__post-title Александра и Константин
+                            .posts-grid-3__post-sub-title «Эллегия любви»
+                            +link('#')(class="btn btn-link-light") ПОДРОБНЕЕ
+                -n++

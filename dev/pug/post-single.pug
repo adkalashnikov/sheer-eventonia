@@ -1,0 +1,15 @@
+extends template/main
+
+block variables
+    - var title = 'Страница 1 новости'
+    - var pageClass = 'post-single'
+
+block body
+    include modules/header/header
+    - var pageTitle = 'h1';
+    .container
+        +section-title('Заголовок конкретной новости')
+    include modules/text-img-left/text-img-left
+    include modules/text-img-right/text-img-right
+    include modules/text-section/text-section
+    include modules/footer/footer

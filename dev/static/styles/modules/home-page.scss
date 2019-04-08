@@ -1,0 +1,24 @@
+.home-page {
+  .page-wrapper {
+    position: relative;
+  }
+
+  .header {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .footer {
+    margin-top: 0;
+
+    &__top {
+      &__inner {
+        border-top: 0;
+      }
+    }
+  }
+}

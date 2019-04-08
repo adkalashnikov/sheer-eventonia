@@ -1,0 +1,55 @@
+.btn {
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  user-select: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  padding: 16px 27px;
+  text-transform: uppercase;
+  font-size: rem(14);
+  line-height: 1;
+  background: $color-swirl;
+  color: $color-mako;
+  transition: background 0.3s ease;
+
+  &:focus,
+  &:hover {
+    outline: 0;
+    background: darken($color-swirl, 15%);
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    opacity: 0.7;
+  }
+
+  &-primary {
+    background-color: $color-bizarre;
+  }
+
+  &-link-light {
+    border: 2px solid $color-white;
+    background: transparent;
+    color: $color-white;
+    padding: 12px 27px;
+
+    &:focus,
+    &:hover {
+      outline: 0;
+      background: darken($color-white, 50%);
+    }
+  }
+}
+
+section {
+  .btn {
+    min-width: 284px;
+
+    &-link-light {
+      min-width: 175px;
+    }
+  }
+}

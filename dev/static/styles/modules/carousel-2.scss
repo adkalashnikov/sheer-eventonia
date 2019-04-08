@@ -1,0 +1,60 @@
+.carousel-2 {
+  .posts-grid-2 {
+    &__post {
+      max-width: unset;
+
+      @media (min-width: 560px) {
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+
+      @media (min-width: 992px) {
+        margin-left: 15px;
+        margin-right: 15px;
+
+        &:nth-child(3n) {
+          margin-left: 15px;
+          margin-right: 15px;
+        }
+      }
+
+      @media (min-width: 1230px) {
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+
+      img {
+        margin: auto;
+      }
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    top: 100%;
+  }
+
+  .slick-prev {
+    left: 15px;
+  }
+
+  .slick-next {
+    right: 15px;
+  }
+}
+
+.js-crousel-2 {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+    width: 100%;
+    height: 1px;
+  }
+
+  .slick-slide {
+    &:focus {
+      outline: none;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+extends template/main
+
+block variables
+    - var title = 'Страница 1 услуги_готовая'
+    - var pageClass = 'service-single'
+
+block body
+    include modules/header/header
+    - var pageTitle = 'h1';
+    .container
+        +section-title('Заголовок конкретной услуги')
+    include modules/text-img-left/text-img-left
+    include modules/text-img-right/text-img-right
+    include modules/carousel-1/carousel-1
+    include modules/order-form/order-form
+    include modules/text-section/text-section
+    include modules/footer/footer

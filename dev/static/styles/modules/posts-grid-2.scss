@@ -1,0 +1,113 @@
+.posts-grid-2 {
+  &__posts {
+    @media (min-width: 640px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    @media (min-width: 992px) {
+      justify-content: center;
+    }
+  }
+
+  &__post {
+    margin: 0 auto 74px;
+    max-width: 240px;
+    position: relative;
+
+    @media (min-width: 640px) {
+      flex-basis: calc(50% - 30px);
+      max-width: 360px;
+    }
+
+    @media (min-width: 992px) {
+      flex-basis: 31%;
+      margin-right: 2%;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+
+    @media (min-width: 1230px) {
+      flex-basis: 33%;
+      margin-right: 30px;
+    }
+  }
+
+  &__post-thumb {
+    min-height: 100px;
+    background-color: $color-mine-shaft;
+  }
+
+  &__post-bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -44px;
+    min-height: 88px;
+    background-color: $color-pampas;
+    margin: 0 20px;
+    transition: background-color 0.3s ease;
+    z-index: 1;
+
+    &:hover {
+      background-color: darken($color-pampas, 10%);
+
+      span {
+        &:before {
+          left: -55px;
+        }
+      }
+    }
+
+    & > a {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__bottom-title {
+    color: $color-mako;
+    font-size: rem(14);
+    line-height: 1.2;
+    text-transform: uppercase;
+    padding: 16px 30px 12px;
+  }
+
+  &__bottom-link {
+    text-align: right;
+    padding: 10px 20px 20px 0;
+    line-height: rem(10);
+
+    span {
+      color: $color-mako;
+      background-color: transparent;
+      text-transform: uppercase;
+      font-size: rem(10);
+      line-height: 1;
+      position: relative;
+      display: inline-flex;
+
+      &:before {
+        content: '';
+        display: block;
+        width: 48px;
+        height: 1px;
+        background: $color-black;
+        position: absolute;
+        bottom: 2px;
+        left: -70px;
+        transition: left 0.3s ease;
+      }
+
+    }
+  }
+
+  &__bottom {
+    text-align: center;
+    padding-top: 20px;
+  }
+}

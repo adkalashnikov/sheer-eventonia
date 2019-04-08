@@ -1,0 +1,37 @@
+mixin icon(name,mod)
+    if(mod)
+        svg(class="svg-sprite-icon icon-" + name + ' ' + mod)
+            use(xlink:href="#" + name)
+    else
+        svg(class="svg-sprite-icon icon-" + name)
+            use(xlink:href="#" + name)
+
+
+mixin link(href, name)
+    //- attributes == {class: "btn"}
+    //- +link('/foo', 'foo')(class="btn")
+    a(class!=attributes.class href=href rel!=attributes.rel)= name
+        if block
+            block
+
+
+mixin section-title(title, bottomTitle)
+    if pageTitle == 'h1'
+        if bottomTitle
+            .section-title
+                h1= title
+                    |
+                    span.section-title__bottom= bottomTitle
+        else
+            .section-title
+                h1= title
+
+        -pageTitle= ''
+    else
+        if bottomTitle
+            .section-title= title
+                |
+                span.section-title__bottom= bottomTitle
+        else
+            .section-title= title
+

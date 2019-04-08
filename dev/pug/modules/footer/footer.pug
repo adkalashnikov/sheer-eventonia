@@ -1,0 +1,79 @@
+footer.footer
+    .footer__top
+        .container
+            .footer__top__inner
+                .footer__top__col.col-1
+                    .footer__title-primary Eventonia weddings
+                    .footer__col-1-text
+                        |"Lorem ipsum dolor sit amet, consectetur adipiscingsed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+                .footer__top__col.col-2
+                    .footer__title Последние новости
+                    .footer__news-item
+                        .footer__news-image
+                            a(href="#"): img(src="static/images/content/72x72.png" alt="image")
+                        div
+                            .footer__news-title
+                                a(href="#") название заголовка тут пишем
+                            .footer__news-date
+                                | 28 февраля 2019 года
+                    hr
+                    .footer__news-item
+                        .footer__news-image
+                            a(href="#"): img(src="static/images/content/72x72.png" alt="image")
+                        div
+                            .footer__news-title
+                                a(href="#") название заголовка тут пишем
+                            .footer__news-date
+                                | 28 февраля 2019 года
+
+                .footer__top__col.col-3
+                    .footer__title Подписаться на наши новости
+                    .footer__col-3-text
+                        | "Lorem ipsum dolor sit amet, consectetur adipiscingsed do eiusmod tempor incididunt
+                    form.footer__form
+                        span
+                            input(type="email" name="email" placeholder="ВАШ E-MAIL")
+                        span
+                            input(type="submit" name="submit" value="ПОДПИСАТЬСЯ")
+
+    .footer__gallery
+        img(src="static/images/general/footer1.jpg" alt="image")
+        img(src="static/images/general/footer2.jpg" alt="image")
+        img(src="static/images/general/footer3.jpg" alt="image")
+        img(src="static/images/general/footer4.jpg" alt="image")
+        img(src="static/images/general/footer5.jpg" alt="image")
+        img(src="static/images/general/footer6.jpg" alt="image")
+        img(src="static/images/general/footer7.jpg" alt="image")
+        img(src="static/images/general/footer8.jpg" alt="image")
+        img(src="static/images/general/footer1.jpg" alt="image")
+        img(src="static/images/general/footer2.jpg" alt="image")
+        img(src="static/images/general/footer3.jpg" alt="image")
+        img(src="static/images/general/footer4.jpg" alt="image")
+
+    .footer__bottom
+        .container
+            .footer__bottom-inner
+                .footer__copy © Copyright 2019 г. Все права защищены
+                .footer__ref Сделано в
+                    a(href="http://sheer82.ru" target="_blank" rel="nofollow"): +icon('sheer')
+
+                nav.footer__nav
+                    ul
+                        li
+                            +link('#', 'о нас')(class="current-link")
+                        li
+                            +link('#', 'портфолио')
+                        li
+                            +link('#', 'отзывы')
+                        li
+                            +link('#', 'концепция')
+                        li
+                            +link('#', 'услуги')
+                        li
+                            +link('#', 'блог')
+                        li
+                            +link('#', 'контакты')
+include ../modal-callback/modal-callback
+include ../modal-consult/modal-consult
+include ../../../static/images/general/sprite.svg

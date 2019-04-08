@@ -1,0 +1,22 @@
+.instagram-section {
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    @media (min-width: 1230px) {
+      justify-content: space-between;
+    }
+  }
+
+  img,
+  a {
+    display: block;
+    margin: 0 15px 15px 0;
+    max-height: 211px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

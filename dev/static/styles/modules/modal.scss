@@ -1,0 +1,44 @@
+.modal {
+  width: 100%;
+  background: $color-gallery;
+  padding: 30px;
+
+  @media (min-width: 768px) {
+    padding: 50px;
+    width: 720px;
+  }
+
+  .section-title {
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    @media (min-width: 415px){
+      font-size: 30px;
+    }
+
+    @media (min-width: 768px){
+      font-size: 48px;
+    }
+  }
+
+  &#modal-callback {
+    max-width: 520px;
+  }
+}
+
+.modal-wrap {
+  .fancybox-close {
+    background-image: none;
+    width: 16px;
+    height: 16px;
+    top: 30px;
+    right: 30px;
+    line-height: rem(16);
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+

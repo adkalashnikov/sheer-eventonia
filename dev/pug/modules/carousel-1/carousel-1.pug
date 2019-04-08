@@ -1,0 +1,9 @@
+section.carousel-1
+    .container
+        +section-title('Запечатленные моменты')
+        .carousel-1__wrapper.js-crousel-1
+            - var n = 0;
+            while n < 6
+                .carousel-1__item
+                    img(src="static/images/content/img-3.jpg" alt="image")
+                -n++

@@ -1,0 +1,17 @@
+extends template/main
+
+block variables
+    - var title = 'Заголовок конкретной свадьбы'
+    - var pageClass = 'portfolio-single'
+
+block body
+    include modules/header/header
+    - var pageTitle = 'h1';
+        .container
+            +section-title('Заголовок конкретной свадьбы')
+    include modules/text-video-left/text-video-left
+    include modules/carousel-1/carousel-1
+    include modules/order-form/order-form
+    include modules/posts-grid-4/posts-grid-4
+    include modules/text-section/text-section
+    include modules/footer/footer

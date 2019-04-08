@@ -1,0 +1,57 @@
+@import "utils/libs";
+@import "utils/vars";
+@import "utils/mixins";
+@import "utils/fonts";
+@import "utils/slick";
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: $base-font-family;
+  color: $color-dove-gray;
+  font-size: rem(21);
+  line-height: rem(36);
+  height: 100%;
+}
+
+*, *:before, *:after { box-sizing: border-box; }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.page-wrapper {
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 15px;
+  transition: max-width 0.3s ease;
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media (min-width: 992px) {
+    max-width: 992px;
+  }
+
+  @media (min-width: 1230px) {
+    max-width: 1140px;
+    padding: 0;
+  }
+}
+
+@import "modules/modules";

@@ -1,0 +1,31 @@
+header.header
+    .container
+        .header__inner
+            +link('/')(class="logo-link")
+                +icon('logo')
+            +link('tel:+79780964715', '+7 978 096 47 15')(class="call-link mobile" rel="nofollow")
+            a.mobile-menu
+                span
+                span
+                span
+            nav.menu__nav
+                span.mobile-menu__close
+                ul
+                    li.lg-hidden
+                        +link('/about.html', 'о нас')(class="current-link")
+                    li.lg-hidden
+                        +link('/portfolio.html', 'портфолио')
+                    li
+                        +link('#', 'отзывы')
+                    li
+                        +link('/concept-page.html', 'концепция')
+                    li
+                        +link('/services.html', 'услуги')
+                    li
+                        +link('/blog.html', 'блог')
+                    li
+                        +link('/contacts.html', 'контакты')
+                    li.call-wrapper
+                        +link('tel:+79780964715', '+7 978 096 47 15')(class="call-link" rel="nofollow")
+                div.btn-wrapper
+                    a.btn(data-fancybox href="#modal-callback") рассчитать свадьбу

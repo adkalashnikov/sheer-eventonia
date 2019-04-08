@@ -1,0 +1,15 @@
+.modal#modal-consult(style="display:none;")
+    +section-title('Проконсультироваться')
+    form.callback-form
+        span
+            input(type="text" name="name" placeholder="ВАШЕ ИМЯ")
+        span
+            input(type="tel" name="phone" placeholder="ТЕЛЕФОН")
+        span
+            input(type="submit" name="submit" value="Перезвоните мне")
+        span.input-group
+            input(type="checkbox" name="checkbox" value="политикой конфиденциальности" checked="checked")
+            span
+                | Согласен c
+                |
+                +link('#', 'политикой конфиденциальности')

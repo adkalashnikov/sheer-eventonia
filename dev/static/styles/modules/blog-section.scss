@@ -1,0 +1,166 @@
+.blog-section {
+  &__posts {
+    @media (min-width: 640px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    @media (min-width: 992px) {
+      justify-content: center;
+    }
+  }
+
+  &__post {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 28px;
+    max-width: 360px;
+
+    @media (min-width: 640px) {
+      margin-left: 0;
+      margin-right: 0;
+      flex-basis: 48%;
+    }
+
+    @media (min-width: 992px) {
+      flex-basis: 31%;
+      margin-right: 2%;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+
+    @media (min-width: 1230px) {
+      flex-basis: 33%;
+      margin-right: 30px;
+    }
+  }
+
+  &__post-thumb {
+    position: relative;
+    min-height: 100px;
+    background-color: $color-mine-shaft;
+
+    a {
+      display: block;
+      height: 100%;
+      width: 100%;
+
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        transition: opacity 0.3s ease;
+        background: linear-gradient(51deg, rgba(0, 0, 0, 0.57) 0%,
+                rgba(0, 0, 0, 0.35) 40%, rgba(0, 0, 0, 0.1) 80%,
+                rgba(0, 0, 0, 0.02) 100%);
+      }
+
+      &:hover {
+        &:before {
+          opacity: 0.6;
+        }
+      }
+    }
+  }
+
+  &__post-date {
+    position: absolute;
+    left: 28px;
+    bottom: 28px;
+    color: $color-swirl;
+    font-family: $secondary-font-family;
+    font-size: rem(24);
+    line-height: 1;
+  }
+
+  &__post-title {
+    color: $color-mako;
+    font-family: $third-font-family;
+    font-size: rem(30);
+    line-height: 1;
+    padding-top: 28px;
+
+    a {
+      color: $color-mako;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: lighten($color-mako, 30%);
+      }
+    }
+  }
+
+  &__post-description {
+    padding-top: 20px;
+    color: $color-dove-gray;
+    font-size: rem(12);
+    line-height: rem(24);
+  }
+
+  &__bottom {
+    text-align: center;
+    padding-top: 15px;
+  }
+
+  &__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    a,
+    .current {
+      color: $color-black;
+      display: inline-flex;
+      height: 30px;
+      line-height: 30px;
+      padding: 0 12px;
+      margin: 5px 10px;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: lighten($color-swirl, 5%);
+      }
+    }
+
+    .current {
+      background: $color-swirl;
+
+      &:hover {
+        background: $color-swirl;
+      }
+    }
+
+    svg {
+      width: 30px;
+      height: 30px;
+      fill: $color-black;
+    }
+
+    .prev,
+    .next {
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      line-height: 1;
+      font-size: rem(30);
+
+      &:hover {
+        background: transparent;
+
+        svg {
+          fill: lighten($color-black, 50%);
+        }
+      }
+    }
+
+
+  }
+}

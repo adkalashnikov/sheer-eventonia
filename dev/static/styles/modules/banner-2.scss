@@ -1,0 +1,82 @@
+.banner-2 {
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 50px;
+
+  @media (min-width: 992px) {
+    margin-top: 100px;
+  }
+
+  &__inner {
+    padding: 30px 15px;
+    background: transparentize($color-black, 0.4);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (min-width: 768px) {
+      padding: 50px 15px;
+    }
+  }
+
+  &__title {
+    background: $color-bizarre;
+    font-size: rem(14);
+    line-height: 1;
+    padding: 12px 24px;
+    text-align: center;
+    margin: 0 0 -21px 0;
+    text-transform: uppercase;
+    z-index: 1;
+
+    @media (min-width: 415px) {
+      padding: 14px 48px;
+    }
+  }
+
+  &__box-wrapper {
+    width: 100%;
+  }
+
+  &__box {
+    background: transparentize($color-white, 0.4);
+    padding: 30px;
+    margin: auto;
+    width: 100%;
+    max-width: 555px;
+
+    @media (min-width: 768px) {
+      padding-bottom: 44px;
+    }
+  }
+
+  &__sub-title {
+    color: $color-mako;
+    font-family: $third-font-family;
+    font-size: rem(24);
+    line-height: 1;
+    margin: 30px 0 20px 0;
+    text-align: center;
+
+    @media (min-width: 768px) {
+      margin-top: 44px;
+    }
+  }
+
+  &__video-btn {
+    margin: 15px 0;
+  }
+
+  .icon-control-play {
+    width: 50px;
+    height: 50px;
+    fill: $color-black;
+    transition: fill 0.3s ease;
+
+    &:hover {
+      fill: transparentize($color-black, 0.5);
+    }
+  }
+}

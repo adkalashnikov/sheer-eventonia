@@ -1,0 +1,27 @@
+section.blog-section
+    .container
+        +section-title('Блог')
+        .blog-section__posts
+            - var n = 0;
+            while n < 6
+                article.blog-section__post
+                    .blog-section__post-thumb
+                        +link('#')
+                            img(src="static/images/content/blog.jpg" alt="article image")
+                            .blog-section__post-date 25.01.2018
+                        |
+                    .blog-section__post-title: +link('#'): | Заголовок статьи в 2 строчки для наглядности
+                    .blog-section__post-description
+                        | "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        | et dolore magna aliqua...
+                -n++
+        .blog-section__bottom
+            .blog-section__pagination
+                +link('#')(class="prev"): +icon('arr-left')
+                +link('#', '1')
+                span.current 2
+                +link('#', '3')
+                +link('#', '4')
+                +link('#', '5')
+                +link('#', '6')
+                +link('#')(class="next"): +icon('arr-right')

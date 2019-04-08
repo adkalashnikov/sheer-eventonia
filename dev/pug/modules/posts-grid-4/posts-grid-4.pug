@@ -1,0 +1,12 @@
+section.posts-grid-4
+    .container
+        +section-title('А вот еще наши свадьбы')
+        .posts-grid-4__posts
+            - var n = 0;
+            while n < 3
+                .posts-grid-4__post
+                    +link('#')
+                        img(src="static/images/content/post-3.jpg" alt="post image")
+                -n++
+        .posts-grid-4__bottom
+            a(class="btn btn-primary" href="#") ПОСМОТРЕТЬ ВСЕ ПРОЕКТЫ

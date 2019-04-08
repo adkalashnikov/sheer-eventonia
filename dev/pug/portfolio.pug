@@ -1,0 +1,12 @@
+extends template/main
+
+block variables
+    - var title = 'Портфолио'
+    - var pageClass = 'portfolio-page'
+
+block body
+    include modules/header/header
+    - var pageTitle = 'h1';
+    include modules/posts-grid-3/posts-grid-3
+    include modules/text-section/text-section
+    include modules/footer/footer

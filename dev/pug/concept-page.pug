@@ -1,0 +1,12 @@
+extends template/main
+
+block variables
+    - var title = 'Концепция'
+    - var pageClass = 'concept-page'
+
+block body
+    include modules/header/header
+    - var pageTitle = 'h1';
+    include modules/posts-grid-1/posts-grid-1
+    include modules/text-section/text-section
+    include modules/footer/footer

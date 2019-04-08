@@ -1,0 +1,17 @@
+section.carousel-2
+    .container
+        +section-title('Услуги, без которых сложно обойтись')
+        .js-crousel-2
+            - var n = 0;
+            while n < 6
+                article.posts-grid-2__post
+                    .posts-grid-2__post-thumb
+                        img(src="static/images/content/service.jpg" alt="post image")
+                    .posts-grid-2__post-bottom
+                        +link('#'): |
+                        .posts-grid-2__bottom-title ФЛОРИСТИКА МЕРОПРИЯТИЯ
+                        .posts-grid-2__bottom-link
+                            span узнать больше
+                -n++
+        .posts-grid-2__bottom
+            a(class="btn btn-primary" href="#") СМОТРЕТЬ ВСЕ УСЛУГИ

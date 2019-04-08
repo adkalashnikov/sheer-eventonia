@@ -1,0 +1,12 @@
+extends template/main
+
+block variables
+    - var title = 'Блог'
+    - var pageClass = 'blog-page'
+
+block body
+    include modules/header/header
+    - var pageTitle = 'h1';
+    include modules/blog-section/blog-section
+    include modules/text-section/text-section
+    include modules/footer/footer

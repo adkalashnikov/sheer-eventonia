@@ -1,0 +1,15 @@
+section.posts-grid-1
+    .container
+        +section-title('Поговорим откровенно,', 'о какой свадьбе вы мечтаете?')
+        .posts-grid-1__posts
+            - var n = 0;
+            while n < 6
+                article.posts-grid-1__post
+                    .posts-grid-1__post-thumb
+                        img(src="static/images/content/post-1.jpg" alt="post image")
+                        +link('#')(class="posts-grid-1__post-btn")
+                            |свадьба на море
+                            +icon('arr-right')
+                -n++
+        .posts-grid-1__bottom
+            a(class="btn btn-primary" href="#") СМОТРЕТЬ ВСЕ ВАРИАНТЫ

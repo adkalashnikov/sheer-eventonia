@@ -1,0 +1,13 @@
+extends template/main
+
+block variables
+    - var title = 'О нас'
+    - var pageClass = 'about-us-page'
+
+block body
+    include modules/header/header
+    - var descriptionSectionTitle = 'h1';
+    include modules/description-section/description-section
+    include modules/explain-section/explain-section
+    include modules/text-section/text-section
+    include modules/footer/footer
